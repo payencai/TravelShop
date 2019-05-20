@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="6dp"
+    android:paddingLeft="@dimen/aroundLR_edge">
+
+    <LinearLayout
+        android:id="@+id/llLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:visibility="visible">
+
+            <com.tec.travelagency.widget.CustomImageView
+                android:id="@+id/hotelHead"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/test_img"
+                app:cusCornerRadius="20"
+                app:shape="roundrect" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/hotelHead"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="6dp"
+
+                android:layout_toRightOf="@id/hotelHead"
+                android:orientation="vertical"
+                android:paddingBottom="6dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/common_font"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/tv_star"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxLines="1"
+                        android:text="广州国际酒店广州国际酒店广州国际酒店"
+                        android:textSize="16sp" />
+
+                    <TextView
+
+                        android:id="@+id/tv_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:text="一星级"
+                        android:textColor="@color/app_theme_color"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/hotel_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="酒店简介文本内容"
+                    android:textColor="@color/tv_333"
+                    android:textSize="@dimen/text_size_12sp" />
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/ll_score"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="5分"
+                            android:textColor="@color/app_theme_color"
+                            android:textSize="@dimen/text_size_12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size_12sp"
+                            android:textColor="@color/tv_333"
+                            android:layout_marginLeft="12dp"
+                            android:id="@+id/evaluate"
+                            android:text="123条评价" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/isPutaway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="已上架"
+                        android:textColor="@color/bg_blue"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:visibility="visible" />
+
+                    <com.tec.travelagency.widget.StarLinearLayout
+                        android:id="@+id/star"
+                        android:layout_centerVertical="true"
+                        android:layout_width="70dp"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="4dp"
+                        app:isEdit="true" />
+                </RelativeLayout>
+                 <TextView
+                     android:id="@+id/tv_min"
+                     android:textColor="@color/order_price"
+                     android:textSize="13sp"
+                     android:text="￥168起"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hotelHead"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="10dp">
+
+
+                <ImageView
+                    android:id="@+id/locate"
+                    android:layout_width="12dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/green_adress" />
+
+                <TextView
+                    android:layout_toRightOf="@id/locate"
+                    android:id="@+id/address"
+                    style="@style/common_font"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:ellipsize="end"
+                    android:gravity="start|center_vertical"
+                    android:maxLines="2"
+                    android:text="广东省广州市番禺区广东省广广东省广州市番禺区广东省广州市番禺区广东省广州市番禺区州市番禺区广东省广州市番禺区"
+                    android:textColor="@color/tv_666"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_marginRight="12dp"
+                    android:layout_width="18dp"
+                    android:id="@+id/callImg"
+                    android:layout_height="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/phone" />
+
+            </RelativeLayout>
+
+
+            <!--号码显示-->
+            <TextView
+
+                android:id="@+id/telephone"
+                style="@style/common_font"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="1"
+                android:text="电话：020-232653"
+                android:textColor="@color/tv_666"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvDelete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFF683F"
+            android:gravity="center"
+            android:text="删除"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/tvTop"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="#6e3c50"
+            android:gravity="center"
+            android:text="置顶"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</RelativeLayout>

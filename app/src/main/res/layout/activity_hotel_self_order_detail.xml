@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.activity.HotelSelfOrderDetailActivity">
+
+    <include layout="@layout/toobar_oneslef_head_layout" />
+
+
+    <!--com.zhouwei.viewpagerlib.CommonViewPager-->
+    <com.tec.travelagency.common.myviewpager.CommonViewPager
+        android:id="@+id/activity_common_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:id="@+id/comment_layout"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0 分"
+                android:textColor="#FF5426"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rectangle_orange"
+                android:padding="4dp"
+                android:text="非常好"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:layout_toRightOf="@+id/layout1"
+            android:background="@color/lines" />
+
+
+        <TextView
+            android:id="@+id/evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/view1"
+            android:layout_toRightOf="@+id/view1"
+            android:text="262条评论"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+        <com.tec.travelagency.widget.StarLinearLayout
+            android:id="@+id/Star"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@id/view1"
+            android:layout_toRightOf="@id/view1"
+            app:isEdit="true" />
+
+        <TextView
+            android:id="@+id/scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/view1"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/Star"
+            android:text="好评率：100%"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_arrow_right" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge">
+
+        <TextView
+            android:id="@+id/checkInTime"
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="7月25日"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/checkOutTime"
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="7月25日"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/days_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_order_days_bg"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="共0晚" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/days_text"
+            android:scaleType="fitXY"
+            android:src="@mipmap/hotel_more" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/days_text"
+            android:scaleType="fitXY"
+            android:src="@mipmap/hotel_more" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lines" />
+
+    <FrameLayout
+        android:id="@+id/oneself_order_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

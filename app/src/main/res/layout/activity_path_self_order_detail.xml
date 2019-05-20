@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.activity.PathSelfOrderDetailActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/toobar_oneslef_head_layout" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="189dp">
+
+                <ImageView
+                    android:id="@+id/gaussImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/scenery"
+                    android:layout_width="145dp"
+                    android:layout_height="109dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@color/tv_333" />
+
+                <TextView
+                    android:id="@+id/picture_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/scenery"
+                    android:layout_alignRight="@id/scenery"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="12dp"
+                    android:text="1/1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/recall_size_12" />
+
+                <TextView
+                    android:id="@+id/pathContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/scenery"
+                    android:layout_alignTop="@id/scenery"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_toRightOf="@id/scenery"
+                    android:ellipsize="end"
+                    android:text="路线行程：\n广州往返成都+理塘+稻城亚丁+然乌湖+雅鲁藏布江大峡谷+来古冰川5天4晚游"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/cityBegin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/scenery"
+                    android:layout_below="@id/scenery"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@mipmap/hotel_location_white"
+                    android:padding="4dp"
+                    android:text="\t广州出发"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative1"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_below="@+id/activity_common_view_pager"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5.0 分"
+                        android:textColor="#FF5426"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_rectangle_orange"
+                        android:padding="4dp"
+                        android:text="非常好"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:layout_toRightOf="@+id/layout1"
+                    android:background="@color/lines" />
+
+
+                <TextView
+                    android:id="@+id/evaluate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/view1"
+                    android:layout_toRightOf="@+id/view1"
+                    android:text="0000条评论"
+                    android:textColor="@color/tv_333"
+                    android:textSize="14sp" />
+
+                <com.tec.travelagency.widget.StarLinearLayout
+                    android:id="@+id/Star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_alignBottom="@id/view1"
+                    android:layout_toRightOf="@id/view1"
+                    app:isEdit="true"
+                    app:score="5" />
+
+                <TextView
+                    android:id="@+id/scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/view1"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@id/Star"
+                    android:text="好评率：100%"
+                    android:textColor="@color/tv_333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="13dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_arrow_right" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@color/white"
+                    android:gravity="center|start"
+                    android:paddingLeft="@dimen/aroundLR_edge"
+                    android:text="¥1521起/人"
+                    android:textColor="@color/app_theme_color"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/lines" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="69dp"
+                    android:background="@color/white"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="12dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/date_select_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/other_time"></android.support.v7.widget.RecyclerView>
+
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/other_time"
+                        android:background="@color/lines" />
+
+                    <FrameLayout
+                        android:id="@+id/other_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <ImageView
+                            android:id="@+id/main_iv_order"
+                            android:layout_width="13dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="top|center_horizontal"
+                            android:layout_marginTop="6dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/icon_more_time" />
+
+                        <TextView
+                            android:id="@+id/main_tv_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="center_vertical"
+                            android:text="其他日期"
+                            android:textColor="@drawable/bottom_bar_deal_text"
+                            android:textSize="10dp" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/bottom_column"
+        android:background="@color/lines" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_column"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge">
+
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="¥350"
+            android:textColor="#FFA726"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/reserve_now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_upper_harf"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:text="立即预定"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

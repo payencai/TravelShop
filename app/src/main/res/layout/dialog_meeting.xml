@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:id="@+id/roomName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/aroundLR_edge"
+            android:text="豪华大床房"
+            android:textColor="@color/color_333"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/hotel_room_delete" />
+
+    </RelativeLayout>
+
+    <com.tec.travelagency.common.myviewpager.CommonViewPager
+        android:id="@+id/room_type_banner"
+        android:layout_width="match_parent"
+        android:layout_height="160dp" />
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/app_theme_color"
+            android:textSize="14sp"
+            android:text="有效期"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/periodOfValidity"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_333"
+            android:text="下单后30天内"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/app_theme_color"
+            android:textSize="14sp"
+            android:text="使用规则"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/regulation"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_333"
+            android:text="本商品价格为使用一小时的价格，请根据使用需求下单"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/app_theme_color"
+            android:textSize="14sp"
+            android:text="温馨提示"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/warmPrompt"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_333"
+            android:text="请提前3天预约使用"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        >
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lines" />
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/pricelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/platform_price"
+                android:text="平台价:￥123"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:id="@+id/selling_price"
+                android:layout_height="wrap_content"
+                android:text="售价:￥123"
+                android:textColor="@color/app_theme_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@+id/pricelayout"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginRight="10dp"
+                android:id="@+id/oneselfBuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_rectangle_upper_harf"
+                android:paddingBottom="6dp"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:paddingRight="@dimen/aroundLR_edge"
+                android:paddingTop="6dp"
+                android:text="自己买"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/updatePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/aroundLR_edge"
+                android:layout_toLeftOf="@+id/oneselfBuy"
+                android:background="@drawable/shape_border_apptheme_bg"
+                android:paddingBottom="6dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="6dp"
+                android:text="修改价格"
+                android:textColor="@color/app_theme_color"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/sold_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/aroundLR_edge"
+                android:layout_toLeftOf="@+id/updatePrice"
+                android:background="@drawable/shape_border_apptheme_bg"
+                android:paddingBottom="6dp"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:paddingRight="@dimen/aroundLR_edge"
+                android:paddingTop="6dp"
+                android:text="上架"
+                android:textColor="@color/app_theme_color"
+                android:textSize="@dimen/text_size_16sp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <com.tec.travelagency.widget.FButton
+        android:id="@+id/addRoomType"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="24dp"
+        android:text="添加房型"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:visibility="gone"
+        app:buttonColor="@color/app_theme_color"
+        app:cornerRadius="@dimen/fbutton_default_shadow_height"
+        app:shadowEnabled="false" />
+
+
+</LinearLayout>

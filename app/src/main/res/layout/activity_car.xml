@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.activity.ticket.TicketsActivity">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/back"
+            android:layout_width="10dp"
+            android:layout_height="15dp" />
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_ticket"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/app_theme_color"
+            app:tabTextColor="@color/tv_666"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/app_theme_color"
+            android:layout_centerInParent="true"
+            app:tabBackground="@color/white"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"></android.support.design.widget.TabLayout>
+    </RelativeLayout>
+    <View
+        android:id="@+id/line1"
+        android:background="@color/gray_e2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+</LinearLayout>

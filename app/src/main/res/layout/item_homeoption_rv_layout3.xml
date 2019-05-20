@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view"
+        android:background="@mipmap/home_bg_gundontiao"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge">
+        <!-- <TextView
+            android:id="@+id/board_platfrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_border_apptheme_bg"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/platform_board"
+            android:text="平台公告"
+            android:textColor="@color/app_theme_color"
+            android:textSize="@dimen/text_size_14sp" />-->
+
+        <TextView
+            android:id="@+id/board_platfrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:scaleType="fitXY"
+            android:text="公告信息"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <com.tec.travelagency.widget.ScrollBanner
+            android:id="@+id/sb_demographic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/board_platfrom"
+            android:visibility="gone" />
+
+        <com.tec.travelagency.widget.VerticalRollingTextView
+            android:id="@+id/rollingView"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/board_platfrom"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/wisdom_tv"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/board_platfrom"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lines" />
+
+
+</RelativeLayout>

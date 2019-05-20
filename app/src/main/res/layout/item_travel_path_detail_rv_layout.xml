@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:background="@android:color/transparent"
+    android:paddingLeft="@dimen/aroundLR_edge"
+    android:paddingRight="@dimen/aroundLR_edge">
+
+    <TextView
+        android:id="@+id/des"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/bg_frame"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:padding="5dp"
+        android:scrollbars="none"
+        android:text="关于理塘的简介关于理塘的简介关于理塘的简介
+        关于理塘的简介关于理塘的简介关于理塘的简介关于理塘的简介关于理塘的简介"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/centreLayout"
+        android:layout_width="72dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/des"
+        android:background="@android:color/transparent">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/site"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" />
+
+
+        <TextView
+            android:id="@+id/site"
+            android:layout_width="@dimen/length_view_50dp"
+            android:layout_height="@dimen/length_view_50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_over_bordar_bg"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:padding="6dp"
+            android:text="理塘"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/site"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white" />
+
+
+    </RelativeLayout>
+
+    <com.tec.travelagency.widget.CustomImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/centreLayout"
+        android:src="@drawable/p002"
+        app:shape="roundrect" />
+
+</RelativeLayout>

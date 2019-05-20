@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/length_view_70dp"
+    android:background="@color/white"
+    android:paddingLeft="16dp"
+    android:paddingRight="@dimen/aroundLR_edge">
+
+
+    <com.tec.travelagency.widget.CustomImageView
+        android:id="@+id/head"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:src="@drawable/p001"
+        app:shape="circle" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/head"
+        android:layout_toLeftOf="@+id/time"
+        android:layout_toRightOf="@id/head"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="你是个好人"
+        android:textSize="16sp" />
+
+    <TextView
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="6dp"
+        android:layout_toLeftOf="@id/time"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="请回答我的疑问，谢谢"
+        android:textColor="@color/color_888"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/time"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/name"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/aroundLR_edge"
+        android:layout_marginTop="6dp"
+        android:text="19:15"
+        android:textColor="@color/color_888"
+        android:textSize="12sp" />
+
+</RelativeLayout>

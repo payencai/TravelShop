@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <TextView
+                android:id="@+id/roomName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:text="高级双人床"
+                android:textColor="@color/color_333"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/cancel"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/hotel_room_delete" />
+
+        </RelativeLayout>
+
+        <!--com.zhouwei.viewpagerlib.CommonViewPager-->
+        <com.tec.travelagency.common.myviewpager.CommonViewPager
+            android:id="@+id/activity_common_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="159dp" />
+
+        <GridView
+            android:id="@+id/detailsGv"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:numColumns="2"></GridView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/aroundLR_edge"
+            android:paddingLeft="@dimen/aroundLR_edge"
+            android:paddingRight="@dimen/aroundLR_edge">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/lines" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="房间描述"
+                android:textColor="@color/color_888"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="落地窗可看日出"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/aroundLR_edge"
+            android:paddingLeft="@dimen/aroundLR_edge"
+            android:paddingRight="@dimen/aroundLR_edge">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/lines" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/isCanCancel"
+                android:layout_marginTop="10dp"
+                android:text="不可取消"
+                android:textColor="@color/color_888"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/canShowText"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="该订单确认后不可被取消修改，如未确认入住请谨慎处理"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/lines" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:paddingLeft="@dimen/aroundLR_edge"
+            android:paddingRight="@dimen/aroundLR_edge">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/price"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="¥350"
+                android:textColor="#FFA726"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/reserve_now"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/shape_rectangle_upper_harf"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:text="立即预定"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

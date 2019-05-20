@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/toobar_head_layout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/orderRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:background="@color/background"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"></android.support.v7.widget.RecyclerView>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/marketRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/aroundLR_edge"
+        android:layout_marginRight="@dimen/aroundLR_edge"
+        android:layout_marginTop="6dp"
+        android:background="@color/background"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

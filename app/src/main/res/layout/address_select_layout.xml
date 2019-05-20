@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selectorLayout"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="42dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/locationSelect"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/addressShowText"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="所在地"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/arrowImg1"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="6dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/arrow_down" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/starSelect"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/starGradle"
+            android:layout_height="42dp"
+            android:gravity="center"
+            android:text="星级"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/arrowImg2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="6dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/arrow_down" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

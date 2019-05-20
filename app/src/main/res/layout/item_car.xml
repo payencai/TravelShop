@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/llLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/aroundLR_edge"
+            android:paddingRight="@dimen/aroundLR_edge">
+
+           <ImageView
+                android:id="@+id/hotelHead"
+                android:layout_width="90dp"
+                android:scaleType="fitXY"
+                android:layout_height="90dp"
+                android:src="@drawable/test_img"
+                android:layout_centerVertical="true"
+               />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/hotelHead"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@+id/hotelHead"
+                android:orientation="vertical">
+                 <RelativeLayout
+                     android:layout_marginRight="5dp"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+                     <TextView
+
+                         android:id="@+id/name"
+                         android:layout_width="match_parent"
+                         android:gravity="start"
+                         android:maxLines="1"
+                         android:ellipsize="end"
+                         style="@style/common_font"
+                         android:layout_height="wrap_content"
+                         android:text="法拉利"
+                         android:textSize="16sp" />
+                     <TextView
+                         android:visibility="gone"
+                         android:id="@+id/tv_star"
+                         android:textSize="12sp"
+                         android:textColor="@color/red"
+                         android:layout_alignParentRight="true"
+                         android:text="三星级"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
+                 </RelativeLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="2dp">
+
+                    <TextView
+                        android:id="@+id/label1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_bordar_label_bg"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:text="不可退"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/label2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:background="@drawable/shape_bordar_label_bg"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:text="柴油车"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:id="@+id/label3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:background="@drawable/shape_bordar_label_bg"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="2dp"
+                        android:text="3人坐"
+                        android:textSize="10dp" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tec.travelagency.widget.StarLinearLayout
+                        android:id="@+id/star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="4dp"
+                        app:isEdit="true" />
+                    <TextView
+                        android:id="@+id/score"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/star"
+                        android:textSize="12sp"
+                        android:textColor="@color/app_theme_color"
+                        android:text="5.0分"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/comment"
+                        android:textSize="12sp"
+                        android:textColor="@color/color_333"
+                        android:layout_alignParentRight="true"
+                        android:text="123条评论"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </RelativeLayout>
+                <RelativeLayout
+
+                    android:id="@+id/bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_marginRight="20dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/color_333"
+                        android:id="@+id/plat_price"
+                        android:text="平台价￥12/小时"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:layout_toRightOf="@id/plat_price"
+                        android:id="@+id/saleprice"
+                        style="@style/common_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="售价￥32/小时"
+                        android:textColor="@color/app_theme_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/isPutaway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="已上架"
+                        android:textColor="@color/bg_blue"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:visibility="visible"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="#e2e2e2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></View>
+
+</RelativeLayout>

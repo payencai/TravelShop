@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=5.0" />
+    <style type="text/css">
+        html, body, iframe { margin:0px; padding:0px; border:none; height:100%; }
+    </style>
+</head>
+<body>
+<iframe id="test" style="width:100%;"
+        src="https://m.amap.com/picker/?keywords=写字楼,小区,学校&amp;zoom=15&amp;center=&amp;radius=10000&amp;total=20&amp;key=eaa189e8ad892d2f7a08538d92efa1f1"
+></iframe>
+<script>
+(function(){
+    var iframe = document.getElementById('test').contentWindow;
+    window.addEventListener("message", function(e){
+      alert('您选择了:' + e.data.name + ',' + e.data.location)
+    }, false);
+}())
+</script>
+</body>
+
+</html>

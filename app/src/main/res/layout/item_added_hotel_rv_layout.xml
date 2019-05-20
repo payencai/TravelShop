@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/aroundLR_edge"
+    android:paddingRight="@dimen/aroundLR_edge">
+
+
+    <ImageView
+        android:id="@+id/hotelHead"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/test_img" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/hotelHead"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/hotelHead"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:text="广州国际酒店"
+            android:textSize="16sp" />
+
+        <TextView
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="广东省广州市番禺区"
+            android:textColor="@color/tv_666"
+            android:textSize="12sp" />
+
+        <TextView
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="电话：020-232653"
+            android:textColor="@color/tv_666"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="添加酒店"
+        android:textColor="@color/app_theme_color"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

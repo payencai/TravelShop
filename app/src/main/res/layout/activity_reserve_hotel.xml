@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.activity.ReserveHotelActivity">
+
+    <include
+        android:id="@+id/headLayout"
+        layout="@layout/toobar_head_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_column"
+        android:layout_below="@id/headLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/aroundLR_edge">
+
+                <TextView
+                    android:id="@+id/name"
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:text="高级双人房" />
+
+                <TextView
+                    android:id="@+id/diffTime"
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="7月25日--7月28日  共3晚" />
+
+                <TextView
+                    android:id="@+id/des"
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="双床 | 可住2人 | WiFi上网 | 无早餐"
+                    android:textColor="@color/color_888"
+                    android:textSize="@dimen/text_size_12sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/aroundLR_edge">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/common_font"
+                        android:layout_height="wrap_content"
+                        android:text="房间数" />
+
+                    <TextView
+                        style="@style/common_font"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="每间最多住2人"
+                        android:textColor="@color/color_888"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/lines" />
+
+                <GridView
+                    android:id="@+id/prople_number_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:numColumns="5"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"></GridView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="联系人"
+                        android:textColor="@color/tv_333"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/nameList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"></android.support.v7.widget.RecyclerView>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/lines" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="手机号"
+                        android:textColor="@color/tv_333"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <EditText
+                        android:id="@+id/telephone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:background="@null"
+                        android:hint="用于接收短信通知"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:textColor="@color/tv_333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text_size_14sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/lines" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="入住人数"
+                        android:textColor="@color/tv_333"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <EditText
+                        android:id="@+id/checkInNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:background="@null"
+                        android:hint="填写入住人数"
+                        android:inputType="number"
+                        android:textColor="@color/tv_333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text_size_14sp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottom_column"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge">
+
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="¥350"
+            android:textColor="#FFA726"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_upper_harf"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:text="提交订单"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

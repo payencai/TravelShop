@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="180dp"
+              android:layout_marginLeft="40dp"
+              android:layout_marginRight="40dp"
+              android:background="@drawable/shape_circular_bead_while"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="平台价"
+            android:textColor="@color/color_333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/platprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="￥0.01"
+            android:textColor="@color/color_333"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="指导价"
+            android:textColor="@color/color_333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/helpprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="￥0.01-￥0.01"
+            android:textColor="@color/color_333"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="售价"
+            android:textColor="@color/color_333"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/et_price"
+            android:paddingLeft="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/shape_bordar_perice_bg"
+            android:hint="0"
+            android:textColorHint="@color/tv_999"
+            android:textSize="@dimen/text_size_14sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/cancel"
+            android:background="@drawable/shape_bordar_perice_bg"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="取消"/>
+
+        <TextView
+            android:id="@+id/confirm"
+            android:background="@drawable/shape_rectangle_upper_harf"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="14sp"
+            android:layout_marginRight="50dp"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:text="确定"/>
+    </RelativeLayout>
+</LinearLayout>

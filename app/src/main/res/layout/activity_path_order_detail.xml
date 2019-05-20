@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".orderManager.activity.PathOrderDetailActivity">
+
+    <include
+        android:id="@+id/headLayout"
+        layout="@layout/toobar_head_layout" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/refund"
+        android:layout_below="@+id/headLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/aroundLR_edge">
+
+            <TextView
+                android:id="@+id/orderId"
+                style="@style/common_font"
+                android:layout_height="match_parent"
+                android:text="订单编号:26448556154561"
+                android:textColor="@color/color_888" />
+
+            <TextView
+                android:id="@+id/placeTime"
+                style="@style/common_font"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:text="下单时间：2018.07.26"
+                android:textColor="@color/color_888" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/aroundTB_edge"
+            android:paddingLeft="@dimen/aroundLR_edge"
+            android:paddingRight="@dimen/aroundLR_edge"
+            android:paddingTop="@dimen/aroundTB_edge">
+
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="广州往返成都+理塘+稻城亚丁+然乌湖+雅鲁藏布江大峡谷+来古冰川两天一夜游"
+                android:textColor="@color/tv_333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/playTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="游玩时间：2018.07.26-2018.07.28"
+                android:textColor="@color/color_888"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/price"
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:text="¥ 150元"
+                    android:textColor="@color/app_theme_color"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/lines" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tel"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:padding="@dimen/aroundLR_edge"
+            android:text="庄先生:137****7000"
+            android:textColor="@color/tv_333" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="@dimen/aroundLR_edge">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/quantity"
+                android:text="出行人数：2人"
+                android:textColor="@color/tv_333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="支付方式：微信"
+                android:textColor="@color/tv_333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:id="@+id/amount"
+                android:text="商品合计：¥300"
+                android:textColor="@color/tv_333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/amount2"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/aroundLR_edge"
+                android:text="实付：¥ 300元"
+                android:textColor="@color/app_theme_color"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/reasonLayout"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/aroundLR_edge">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退款理由"
+                android:textColor="@color/tv_333"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/reason_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="这里是用户的退款理由"
+                android:textColor="@color/color_888"
+                android:textSize="@dimen/text_size_14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/refund"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_theme_color"
+        android:text="退款"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp" />
+
+</RelativeLayout>

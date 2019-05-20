@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/aroundLR_edge">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tec.travelagency.widget.CustomImageView
+            android:id="@+id/hotelHead"
+            android:layout_width="65dp"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/test_img"
+            app:cusCornerRadius="15"
+            app:shape="roundrect" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/hotelHead"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/hotelHead"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/common_font"
+                android:layout_height="wrap_content"
+                android:text="广州国际酒店"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/evaluate_number"
+                style="@style/common_font"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="345条评论"
+                android:textColor="@color/tv_666"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/telephone"
+                style="@style/common_font"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="4.8分 非常好"
+                android:textColor="#FF7550"
+                android:textSize="12sp" />
+
+            <com.tec.travelagency.widget.StarLinearLayout
+                android:id="@+id/Star"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginTop="4dp"
+                app:isEdit="true"
+                app:layout_constraintLeft_toLeftOf="@+id/storeName"
+                app:layout_constraintTop_toBottomOf="@id/storeName" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/hotelHead"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/aroundLR_edge"
+            android:text="¥350起"
+            android:textColor="@color/app_theme_color"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

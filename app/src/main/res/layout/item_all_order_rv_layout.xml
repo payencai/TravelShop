@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/aroundLR_edge"
+    android:paddingRight="@dimen/aroundLR_edge">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="@dimen/length_view_60dp"
+        android:layout_height="@dimen/length_view_60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/p001" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/head"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/head"
+        android:text="广州国际酒店"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/location"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/name"
+        android:layout_marginTop="6dp"
+        android:text="广州天河区"
+        android:textColor="@color/color_888"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/price"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/location"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        android:text="¥150"
+        android:textColor="@color/app_theme_color"
+        android:textSize="20sp" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="130dp"
+    android:layout_height="45dp"
+    android:layout_marginRight="12dp"
+    android:background="@drawable/shape_rectangle_upper_harf">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:text="7月25日"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/date"
+        android:layout_alignRight="@id/date"
+        android:layout_below="@id/date"
+        android:gravity="center"
+        android:text="¥2340"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/go_off_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="@string/start_off_string"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/go_off_time"
+        android:background="@color/white" />
+
+</RelativeLayout>

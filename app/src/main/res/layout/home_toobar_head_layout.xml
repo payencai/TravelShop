@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headLayout"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:layout_margin="10dp"
+    android:paddingRight="@dimen/length_view_20dp"
+    android:background="@drawable/shape_circle_orange">
+
+    <ImageView
+        android:id="@+id/mine"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:src="@mipmap/home_mine_white" />
+    <TextView
+        android:id="@+id/title"
+        style="@style/common_font"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="50dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="药品信息"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/notify"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/notify" />
+
+
+</RelativeLayout>

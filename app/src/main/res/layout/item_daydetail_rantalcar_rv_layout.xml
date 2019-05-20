@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/local_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:lineSpacingExtra="5sp"
+        android:text="大众桑塔纳：豪华5座大众商务车，高端大气上档次，商务宴请首选。" />
+
+
+    <RelativeLayout
+        android:id="@+id/rental_layout"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_marginTop="6dp">
+
+        <ImageView
+            android:id="@+id/car_img1"
+            android:layout_width="120dp"
+            android:layout_height="92dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/p001" />
+
+        <ImageView
+            android:id="@+id/car_img2"
+            android:layout_width="120dp"
+            android:layout_height="92dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/car_img1"
+            android:scaleType="fitXY"
+            android:src="@drawable/p001" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="13dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_arrow_right" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

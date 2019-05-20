@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".serviceManager.activity.ChatWindowActivity">
+
+    <include
+        android:id="@+id/headLayout"
+        layout="@layout/toobar_head_layout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chatContentRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view"
+        android:layout_below="@id/headLayout"></android.support.v7.widget.RecyclerView>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/bottom_column"
+        android:background="@color/lines" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_column"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge">
+
+        <EditText
+            android:id="@+id/sendContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="72dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/shape_rectangle_chat_edit_bg"
+            android:gravity="start"
+            android:paddingLeft="6dp"
+            android:textCursorDrawable="@null" />
+
+
+        <com.tec.travelagency.widget.FButton
+            android:id="@+id/sendBtn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="发送"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:buttonColor="@color/app_theme_color"
+            app:cornerRadius="@dimen/fbutton_default_padding_bottom"
+            app:shadowEnabled="false" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

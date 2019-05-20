@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.tec.travelagency">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 储存卡的读写权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 调用相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- 微信支付 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 百度地图 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 小米刘海屏适配-->
+        <meta-data
+            android:name="notch.config"
+            android:value="none"/>
+        <meta-data
+            android:name="android.notch_support"
+            android:value="false"/>
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="s3aRos5HZ1okvMZ7Vg4UIukq2BgrclIm" />
+
+        <!-- 环信 -->
+        <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1108180829228467#journey" />
+        <!-- android:value="1131180503177119#memen" /> -->
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!-- 百度地图定位必须 -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:process=":multiprocess"
+            tools:node="replace" />
+
+        <receiver
+            android:name=".JPush.JpushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.tec.travelagency" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".common.activity.MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".common.activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".common.activity.MineActivity" />
+        <activity android:name=".common.activity.AddressManagerActivity" />
+        <activity android:name=".common.activity.TelephoneManagerActivity" />
+
+        <!-- 图片选择Activity -->
+        <activity
+            android:name="com.donkingliang.imageselector.ImageSelectorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!-- 图片预览Activity -->
+        <activity
+            android:name="com.donkingliang.imageselector.PreviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!-- 图片剪切Activity -->
+        <activity
+            android:name="com.donkingliang.imageselector.ClipImageActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <!-- Android 7.0 文件共享配置，必须配置 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:enabled="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sdksample" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".home.activity.HotelManagerActivity" />
+        <activity android:name=".home.activity.HotelDetailActivity" />
+        <activity android:name=".orderManager.activity.OrderDetailActivity" />
+        <activity android:name=".serviceManager.activity.ChatWindowActivity" />
+        <activity android:name=".orderManager.activity.AllOderActivity" />
+        <activity android:name=".home.activity.TravelRouteActivity" />
+        <activity android:name=".home.activity.RouteDetailActivity" />
+        <activity android:name=".home.activity.DoorTicketActivity" />
+        <activity android:name=".home.activity.DoorTicketDetailActivity" />
+        <activity android:name=".home.activity.RentCarActivity" />
+        <activity android:name=".home.activity.RentCarDetailActivity" />
+        <activity android:name=".common.activity.AddressWebViewActivity" />
+        <activity
+            android:name=".home.activity.HotelManagerNewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".home.activity.HotelManagerNewCNMActivity" />
+        <activity android:name=".home.activity.PlatformHotelListActivity" />
+        <activity android:name=".home.activity.ScenicActivity" />
+        <activity android:name=".home.activity.SelectUpdateDataActivity" />
+        <activity android:name=".home.activity.SelectDatePriceActivity" />
+        <activity android:name=".home.activity.SelectUpdatePriceOneDayActivity" />
+        <activity android:name=".orderManager.activity.DoorTicketOrderDetailActivity" />
+        <activity android:name=".orderManager.activity.HotelOrderDetailActivity" />
+        <activity android:name=".home.activity.LxsHotelOrderDetailActivity" />
+        <activity android:name=".orderManager.activity.RentCarOrderDetailActivity" />
+        <activity android:name=".orderManager.activity.PathOrderDetailActivity" />
+        <activity android:name=".home.activity.SynopsisActivity" />
+        <activity android:name=".home.activity.HotelSelfOrderActivity" />
+        <activity android:name=".home.activity.HotelSelfOrderDetailActivity" />
+        <activity
+            android:name=".home.activity.ReserveHotelActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".home.activity.RentalSelfOrderActivity" />
+        <activity android:name=".home.activity.RentalSelfOrderDetailActivity" />
+        <activity android:name=".home.activity.WriteRentalCarInfoActivity" />
+        <activity android:name=".home.activity.PathSelfOrderActivity" />
+        <activity android:name=".home.activity.PathSelfOrderDetailActivity" />
+        <activity android:name=".home.activity.ScenicSelfOrderActivity" />
+        <activity android:name=".home.activity.ScenicSelfOrderDetailActivity" />
+        <activity android:name=".home.activity.WriteDoorTickerInfoActivity" />
+        <activity android:name=".home.activity.WritePathOrderActivity" />
+        <activity android:name=".home.activity.CommentActivity" />
+        <activity android:name=".serviceManager.activity.ChatActivity" />
+        <activity android:name=".common.activity.FindPasswordActivity" />
+        <activity android:name=".orderManager.activity.RefundActivity" />
+        <activity android:name=".home.activity.UserHotelOrderDetailActivity" />
+        <activity android:name=".common.activity.WebViewActivity" />
+
+        <!-- .test.RoutePlanDemo -->
+        <activity
+            android:name=".baiduMap.RoutePlanDemo"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/demo_name_route"
+            android:screenOrientation="portrait" />
+        <activity android:name=".baiduMap.BNaviGuideActivity" />
+        <activity android:name=".baiduMap.TestWNaviGuideActivity" />
+        <activity android:name=".common.activity.AgreementActivity" />
+        <activity android:name=".home.activity.NotifyActivity" />
+        <activity android:name=".home.activity.HotelImageActivity" />
+        <activity android:name=".home.activity.MeetingActivity" />
+        <activity android:name=".home.activity.NewRentActivity" />
+        <activity
+            android:name=".home.activity.route.NewPathActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".home.activity.NewTicketActivity" />
+        <activity
+            android:name=".home.activity.meeting.NewMeetingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".home.activity.meeting.MeetingDetailActivity" />
+        <activity android:name=".home.activity.meeting.MeetingUpActivity" />
+        <activity
+            android:name=".home.activity.ticket.TicketsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.activity.rent.CarActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".home.activity.meeting.MeetingOrderActivity" />
+        <activity
+            android:name=".home.activity.meeting.TakeOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".home.activity.rent.CarDetailActivity" />
+        <activity android:name=".home.activity.hotel.HotelSearchActivity" />
+        <activity android:name=".home.activity.hotel.SearchResultActivity" />
+        <activity android:name=".home.activity.hotel.MoreInfoCalendarActivity" />
+        <activity
+            android:name=".home.activity.rent.CarOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".home.activity.hotel.OneCalenderActivity" />
+        <activity
+            android:name=".home.activity.route.PathDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.activity.route.PathOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.activity.ticket.TicketsDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.activity.ticket.PlatTicketsDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".home.activity.ticket.TicketOrderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".orderManager.fragment.detail.CarOrderDelActivity" />
+        <activity android:name=".orderManager.fragment.detail.PathOrderDelActivity" />
+        <activity android:name=".orderManager.fragment.detail.TicketsOrderDelActivity" />
+        <activity android:name=".orderManager.fragment.detail.MeetOrderDelActivity" />
+        <activity android:name=".orderManager.fragment.detail.HotelOrderDelActivity" />
+        <activity android:name=".home.activity.route.PathOneMonthActivity" />
+        <activity android:name=".orderManager.fragment.user.UserCarOrderDelActivity" />
+        <activity android:name=".orderManager.fragment.user.UserHotelOrderDelActivity" />
+        <activity android:name=".orderManager.fragment.user.UserMeetOrderDelActivity" />
+        <activity android:name=".orderManager.fragment.user.UserPathOrderDelActivity" />
+        <activity android:name=".orderManager.fragment.user.UserTicketsOrderDelActivity" />
+        <activity android:name=".common.activity.X5WebviewActivity"></activity>
+    </application>
+
+</manifest>

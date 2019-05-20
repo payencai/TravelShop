@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".orderManager.activity.HotelOrderDetailActivity">
+
+    <include
+        android:id="@+id/headLayout"
+        layout="@layout/toobar_head_layout" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/refund"
+        android:layout_below="@+id/headLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/aroundLR_edge">
+
+                <TextView
+                    android:id="@+id/orderId"
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:text="订单编号:"
+                    android:textColor="@color/color_888" />
+
+                <TextView
+                    android:id="@+id/placeTime"
+                    style="@style/common_font"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:text="下单时间:"
+                    android:textColor="@color/color_888" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:paddingRight="@dimen/aroundLR_edge">
+
+                <TextView
+                    android:id="@+id/checkInTime"
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="1月1日"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/checkInShowTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/checkInTime"
+                    android:gravity="center"
+                    android:text="@string/checkin_show_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/checkOutShowTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center"
+                    android:text="@string/checkout_show_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/checkOutTime"
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/checkOutShowTime"
+                    android:text="1月1日"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/days_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_order_days_bg"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="共0晚" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/days_text"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/hotel_more" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/days_text"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/hotel_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/lines" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/aroundTB_edge"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:paddingRight="@dimen/aroundLR_edge"
+                android:paddingTop="@dimen/aroundTB_edge">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/tv_333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/bedType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text=""
+                    android:textColor="@color/tv_333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/breakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text=""
+                    android:textColor="@color/color_888"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/isCanCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text=""
+                    android:textColor="@color/color_888"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/price"
+                        style="@style/common_font"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="¥ 0元"
+                        android:textColor="@color/app_theme_color"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:padding="@dimen/aroundLR_edge"
+                android:text=""
+                android:textColor="@color/tv_333" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/lines" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/aroundLR_edge">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="支付方式：微信"
+                    android:textColor="@color/tv_333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="商品合计：¥0"
+                    android:textColor="@color/tv_333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/amount2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/aroundLR_edge"
+                    android:text="实付：¥ 0元"
+                    android:textColor="@color/app_theme_color"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reasonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/aroundLR_edge">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="退款理由"
+                    android:textColor="@color/tv_333"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:id="@+id/reason_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由
+这里是用户的退款理由"
+                    android:textColor="@color/color_888"
+                    android:textSize="@dimen/text_size_14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/refund"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/refund_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/app_theme_color"
+            android:text="退款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/reason_option"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@+id/view"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/submit"
+                style="@style/common_font"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/view"
+                android:layout_weight="1"
+                android:background="@color/app_theme_color"
+                android:text="确定"
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:id="@+id/cancel"
+                style="@style/common_font"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_below="@+id/view"
+                android:layout_weight="1"
+                android:background="#F64A4A"
+                android:text="拒绝"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

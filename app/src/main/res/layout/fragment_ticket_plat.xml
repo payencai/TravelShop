@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:background="@drawable/shape_rounded_rectangle_gray_bg"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:background="@drawable/shape_grey"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <LinearLayout
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/search_bar_icon_normal"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+                <EditText
+
+                    android:id="@+id/search"
+                    android:textColorHint="@color/tv_666"
+                    android:textColor="@color/tv_333"
+                    android:textSize="13sp"
+                    android:hint="请输入查找的名称"
+                    android:background="@color/gray_e2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/show"
+                    android:textColorHint="@color/tv_666"
+                    android:textColor="@color/tv_333"
+                    android:textSize="13sp"
+                    android:text="请输入查找的酒店名称"
+                    android:background="@color/gray_e2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/selectorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/headLayout"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/locationSelect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addressShowText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="所在地"
+                    android:textColor="@color/tv_333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/arrowImg1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/arrow_down" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/starSelect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/starGradle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="星级"
+                    android:textColor="@color/tv_333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/arrowImg2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/arrow_down" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="@color/tv_333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/arrowImg3"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/arrow_down" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/sf_ticket1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_ticket1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

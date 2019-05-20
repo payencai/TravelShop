@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/days_text"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_circle_top_right_orange"
+                android:gravity="center"
+                android:text="day1"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/length_view_30dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:text="广州集合-成都"
+                android:textColor="@color/tv_333"
+                android:textSize="@dimen/text_size_16sp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/app_theme_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+
+            <ImageView
+                android:id="@+id/head_flag_list"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/icon_concentrated" />
+
+            <TextView
+                android:id="@+id/list_address_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/head_flag_list"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="集合地点：广州白云机场豪庭大酒店"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/list_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/list_address_text"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="6dp"
+                android:layout_toRightOf="@+id/head_flag_list"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="时间：早上11点前集中完毕，乘坐班机前往成都，到达成都时间为下午4点。"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/hotel_falg_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/list_address_text"
+                android:layout_below="@+id/list_time_text"
+                android:layout_marginTop="12dp"
+                android:text="入住酒店"
+                android:textColor="@color/tv_333"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/hotelItem"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/hotel_falg_text"
+                android:layout_below="@+id/hotel_falg_text"
+                android:layout_marginTop="6dp">
+
+                <com.tec.travelagency.widget.CustomImageView
+                    android:id="@+id/hotel_img"
+                    android:layout_width="@dimen/length_view_60dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:shape="roundrect" />
+
+                <TextView
+                    android:id="@+id/hotel_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/hotel_img"
+                    android:text="成都国际大酒店"
+                    android:textColor="@color/tv_333"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/hotel_room_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/hotel_name"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:text="标准房型"
+                    android:textColor="@color/color_888"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="7dp"
+                    android:layout_height="13dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_arrow_right" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+
+            <ImageView
+                android:id="@+id/scenic_flag_list"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/icon_attractions" />
+
+            <TextView
+                android:id="@+id/scenic_address_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/scenic_flag_list"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="景点门票"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/scenic_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/scenic_address_text"
+                android:layout_below="@+id/scenic_address_text"
+                android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+
+            <ImageView
+                android:id="@+id/traffic_flag_list"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/icon_car" />
+
+            <TextView
+                android:id="@+id/traffic_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/traffic_flag_list"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="交通"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/transportation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/traffic_car"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@+id/traffic_flag_list"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="汽车出行"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/traffic_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/transportation"
+                android:layout_below="@+id/transportation"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="5sp"
+                android:text="行驶时间：2小时\n乘车经理塘到稻城亚丁" />
+
+            <TextView
+                android:id="@+id/runningPath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/traffic_des"
+                android:layout_below="@+id/traffic_des"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="5sp"
+                android:text="坐车到成都" />
+
+
+            <TextView
+                android:id="@+id/local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/runningPath"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@+id/traffic_flag_list"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="当地租车"
+                android:textColor="@color/tv_333"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rental_car_rv"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/local"
+                android:layout_below="@+id/local"
+                android:layout_marginTop="6dp"></android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

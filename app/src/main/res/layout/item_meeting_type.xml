@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:id="@+id/item"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:paddingRight="@dimen/aroundLR_edge">
+
+    <ImageView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/head"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/p001" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/head"
+
+        android:layout_toRightOf="@id/head"
+        android:text="广州国际酒店"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/plat"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/name"
+        android:layout_marginTop="15dp"
+        android:text="平台价：￥23"
+        android:textColor="@color/tv_999"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/sale"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/head"
+        android:layout_below="@id/plat"
+        android:layout_marginTop="15dp"
+        android:text="售价：￥23"
+        android:textColor="@color/app_theme_color"
+        android:textSize="12sp" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/adapot"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="已上架"
+        android:textColor="@color/bg_blue"
+        android:textSize="14sp" />
+
+</RelativeLayout>

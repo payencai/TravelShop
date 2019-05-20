@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="6dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/llLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:visibility="visible">
+
+            <com.tec.travelagency.widget.CustomImageView
+                android:id="@+id/hotelHead"
+                android:layout_width="86dp"
+                android:layout_marginLeft="15dp"
+                android:layout_height="86dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/test_img"
+                app:cusCornerRadius="20"
+                app:shape="roundrect" />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_alignTop="@id/hotelHead"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="6dp"
+                android:layout_toRightOf="@id/hotelHead"
+                android:orientation="vertical"
+                android:paddingBottom="6dp">
+
+
+                <TextView
+                    android:layout_toLeftOf="@id/tv_star"
+                    android:id="@+id/name"
+                    style="@style/common_font"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:text="兰博基尼"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/aroundLR_edge"
+                    android:text="一星级"
+                    android:textColor="@color/app_theme_color"
+                    android:textSize="@dimen/text_size_12sp"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <com.tec.travelagency.widget.StarLinearLayout
+                        android:id="@+id/star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="12dp"
+                        android:layout_marginTop="4dp"
+                        app:isEdit="true" />
+                    <TextView
+                        android:layout_toRightOf="@id/star"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="5.0分"
+                        android:textColor="@color/app_theme_color"
+                        android:textSize="@dimen/text_size_12sp" />
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:textColor="@color/tv_333"
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/evaluate"
+                        android:text="123条评价" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:id="@+id/bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+
+                        android:layout_marginRight="20dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/color_333"
+                        android:id="@+id/plat_price"
+                        android:text="平台价￥12/小时"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:layout_toRightOf="@id/plat_price"
+                        android:id="@+id/saleprice"
+                        style="@style/common_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="售价￥32/小时"
+                        android:textColor="@color/app_theme_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:id="@+id/isPutaway"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="12dp"
+                        android:text="已上架"
+                        android:textColor="@color/bg_blue"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:visibility="visible"/>
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+        </RelativeLayout>
+        <View
+           android:layout_marginTop="5dp"
+            android:background="@color/gray_e2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

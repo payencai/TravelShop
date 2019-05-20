@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="费用说明"
+        android:textColor="@color/tv_333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/trafficSpecification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cost_traffic_info_string"
+        android:textColor="@color/tv_333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/ticketSpecification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/cost_put_info_string"
+        android:textColor="@color/tv_333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/hotelSpecification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/cost_doorticker_info_string"
+        android:textColor="@color/tv_333"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

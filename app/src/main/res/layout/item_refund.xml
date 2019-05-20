@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <!--申请取消成功-->
+    <LinearLayout
+        android:id="@+id/applyCancelSucceedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:padding="2dp"
+        >
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="拒绝取消"
+            android:textColor="@color/color_888"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/applyCancelSucceedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="2018-05-21 22:00"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <!--申请取消原因-->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/cancelReasonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+       >
+
+        <TextView
+            android:layout_marginLeft="2dp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="原因"
+            android:textColor="@color/color_888"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/cancelReasonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="不想住了。。。"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+</LinearLayout>

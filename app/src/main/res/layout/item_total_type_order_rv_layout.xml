@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="6dp"
+    android:background="@drawable/shape_circular15_bead_while">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="酒店(日)"
+        android:textColor="@color/color_888"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view"
+        android:layout_alignLeft="@id/view"
+        android:layout_alignRight="@id/view"
+        android:layout_marginBottom="6dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/tv_333"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignLeft="@+id/name"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="6dp"
+        android:layout_toLeftOf="@+id/orderTag"
+        android:background="@color/app_theme_color" />
+
+    <TextView
+        android:id="@+id/orderTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="12dp"
+        android:text="订单"
+        android:textColor="@color/tv_333"
+        android:textSize="16sp" />
+
+</RelativeLayout>

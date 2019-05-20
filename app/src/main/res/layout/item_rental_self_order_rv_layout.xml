@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/aroundLR_edge"
+    android:paddingRight="@dimen/aroundLR_edge">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tec.travelagency.widget.CustomImageView
+            android:id="@+id/hotelHead"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/test_img"
+            android:visibility="gone"
+            app:cusCornerRadius="15"
+            app:shape="roundrect" />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/price"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:gravity="start"
+                android:maxLines="1"
+                android:ellipsize="end"
+                style="@style/common_font"
+                android:layout_height="wrap_content"
+                android:text="广州国际酒店"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/introduce"
+                style="@style/common_font"
+                android:layout_width="178dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:maxLines="2"
+                android:text="介绍：豪华5座大众商务车，高端大气上档次，商务宴请首选。"
+                android:textColor="@color/tv_666"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/aroundLR_edge"
+            android:text="¥350日"
+            android:textColor="@color/app_theme_color"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

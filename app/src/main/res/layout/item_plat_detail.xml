@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:paddingTop="10dp"
+    android:id="@+id/item"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/aroundLR_edge"
+    android:paddingRight="@dimen/aroundLR_edge">
+
+    <ImageView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/head"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/p001" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/head"
+
+        android:layout_toRightOf="@id/head"
+        android:text="广州国际酒店"
+        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/ll_price"
+        android:orientation="vertical"
+        android:layout_alignLeft="@id/name"
+        android:layout_below="@id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/plat2"
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:text="平台价：￥23"
+            android:textColor="@color/app_theme_color"
+            android:textSize="12sp" />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:id="@+id/plat"
+            style="@style/common_font"
+            android:layout_height="wrap_content"
+            android:text="售价：￥23"
+            android:textColor="@color/app_theme_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+       android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bordar_label_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="不可退"
+            android:textSize="10dp" />
+
+        <TextView
+
+            android:id="@+id/label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/shape_bordar_label_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="当日有效"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/sale"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="已售23234"
+        android:textColor="@color/color_888"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:id="@+id/isadd"
+        style="@style/common_font"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="已上架"
+        android:textColor="@color/bg_blue"
+        android:textSize="12sp" />
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/abs_parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:id="@+id/headLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_marginRight="10dp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:src="@mipmap/back"/>
+            <RelativeLayout
+                android:paddingLeft="20dp"
+                android:id="@+id/rl_search"
+                android:background="@drawable/shape_grey"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/search_bar_icon_normal"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <EditText
+                        android:id="@+id/search"
+                        android:textColorHint="@color/tv_666"
+                        android:textColor="@color/tv_999"
+                        android:textSize="13sp"
+                        android:hint="请输入查找的酒店名称"
+                        android:background="@color/gray_e2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/show"
+                        android:textColorHint="@color/tv_666"
+                        android:textColor="@color/tv_333"
+                        android:textSize="13sp"
+                        android:text="请输入查找的酒店名称"
+                        android:background="@color/gray_e2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_above="@+id/selectorLayout"
+            android:id="@+id/line1"
+            android:background="@color/gray_e2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></View>
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/hide"
+            android:background="@color/tv_666"
+            android:elevation="1dp"
+            android:layout_below="@id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_marginRight="20dp"
+                android:id="@+id/btn_search"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/tv_333"
+                android:text="搜索"
+                android:background="@color/bg_blue"
+                android:layout_width="60dp"
+                android:layout_height="40dp"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/selectorLayout"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_below="@+id/headLayout"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/locationSelect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/addressShowText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="所在地"
+                    android:textColor="@color/tv_333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/arrowImg1"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/arrow_down" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/starSelect"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/starGradle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="星级"
+                    android:textColor="@color/tv_333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/arrowImg2"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/arrow_down" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="全部"
+                    android:textColor="@color/tv_333"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/arrowImg3"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/arrow_down" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/base_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_column"
+            android:layout_below="@+id/selectorLayout"
+            android:visibility="visible">
+
+            <!--LeftSwipeMenuRecyclerView-->
+            <!-- <com.tec.travelagency.widget.LeftSwipeMenuRecyclerView-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/base_fragment_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_column"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/showLoadMore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="加载更多" />
+
+            <ProgressBar
+                style="@style/AlertDialog.AppCompat"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@+id/showLoadMore"
+                android:indeterminateTint="#000000"
+                android:padding="8dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

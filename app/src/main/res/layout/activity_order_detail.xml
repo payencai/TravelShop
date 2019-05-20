@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".orderManager.activity.OrderDetailActivity">
+
+    <include
+        android:id="@+id/headLayout"
+        layout="@layout/toobar_head_layout" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/refund"
+        android:layout_below="@+id/headLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:text="订单编号:26448556154561"
+                    android:textColor="@color/color_888" />
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="下单时间：2018.07.26   10:20:20"
+                    android:textColor="@color/color_888" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:paddingRight="@dimen/aroundLR_edge">
+
+                <TextView
+                    android:id="@+id/checkInTime"
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="7月25日"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/checkInShowTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@id/checkInTime"
+                    android:gravity="center"
+                    android:text="@string/checkin_show_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/checkOutShowTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center"
+                    android:text="@string/checkout_show_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/checkOutTime"
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/checkOutShowTime"
+                    android:text="7月25日"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/days_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_order_days_bg"
+                    android:gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="共3晚" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="8dp"
+                    android:layout_toLeftOf="@id/days_text"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/hotel_more" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/days_text"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/hotel_more" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/lines" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/aroundTB_edge"
+                android:paddingLeft="@dimen/aroundLR_edge"
+                android:paddingRight="@dimen/aroundLR_edge"
+                android:paddingTop="@dimen/aroundTB_edge">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:text="广州国际大酒店"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
+                    android:text="高级双人床"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="无早餐"
+                    android:textColor="@color/tv_666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
+                    android:text="不可取消"
+                    android:textColor="@color/tv_666"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:gravity="end"
+                    android:paddingBottom="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp"
+                    android:text="应付: 350元"
+                    android:textColor="@color/app_theme_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/aroundTB_edge">
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="@dimen/aroundLR_edge"
+                    android:text="庄先生:137****7000"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/lines" />
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="@dimen/aroundLR_edge"
+                    android:text="支付方式：微信"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:paddingLeft="@dimen/aroundLR_edge"
+                    android:text="商品合计：¥350"
+                    android:textSize="16sp" />
+
+                <TextView
+                    style="@style/common_font"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="@dimen/aroundLR_edge"
+                    android:text="实付：¥ 350元"
+                    android:textColor="@color/app_theme_color"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/refund"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_theme_color"
+        android:text="退款"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp" />
+
+
+</RelativeLayout>

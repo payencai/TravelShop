@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="43dp"
+        android:layout_marginTop="16dp"
+        android:text="广州往返成都+理塘+稻城亚丁+然乌湖+雅鲁藏布江大峡谷3日游"
+        android:textColor="@color/tv_333"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/navigationRv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:visibility="gone"></android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="5天4晚"
+            android:textColor="@color/color_888"
+            android:textSize="@dimen/text_size_12sp" />
+
+
+        <TextView
+            android:id="@+id/cityBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/time"
+            android:background="@drawable/shape_bordar_orange__bg"
+            android:padding="4px"
+            android:text="广州出发"
+            android:textColor="#FF6940"
+            android:textSize="@dimen/text_size_10sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="¥2340起"
+            android:textColor="@color/app_theme_color"
+            android:textSize="@dimen/text_size_16sp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

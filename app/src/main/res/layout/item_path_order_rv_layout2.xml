@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge">
+
+        <TextView
+            android:id="@+id/orderId"
+            style="@style/common_font"
+            android:layout_height="match_parent"
+            android:text="订单编号:26448556154561" />
+
+        <TextView
+            style="@style/common_font"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="路线" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lines" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/lines" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/aroundTB_edge"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge"
+        android:paddingTop="@dimen/aroundTB_edge">
+
+
+        <TextView
+            android:id="@+id/pathContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="广州往返成都+理塘+稻城亚丁+然乌湖+雅鲁藏布江大峡谷+来古冰川两天一夜游"
+            android:textColor="@color/tv_333"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/common_font"
+                android:layout_height="match_parent"
+                android:text="应付: 350元"
+                android:textColor="@color/app_theme_color" />
+
+            <TextView
+                android:id="@+id/order_item_state"
+                style="@style/common_font"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="下单时间：2018.07.21 10:25:12"
+                android:textColor="@color/color_888" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

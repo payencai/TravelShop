@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/aroundLR_edge">
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="长隆水上乐园成人票"
+        android:textColor="@color/tv_333"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="10dp"
+        android:text="可退"
+        android:textColor="@color/color_888"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <TextView
+        android:id="@+id/reserve_now"
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:layout_alignBottom="@+id/cancel"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_rectangle_upper_harf"
+        android:gravity="center"
+        android:text="预定"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/reserve_now"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        android:text="¥545"
+        android:textColor="@color/app_theme_color"
+        android:textSize="16sp" />
+
+</RelativeLayout>

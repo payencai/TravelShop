@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:id="@+id/gradeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="评分"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <com.tec.travelagency.widget.StarLinearLayout
+            android:id="@+id/grad_star"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@id/view1"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/view1"
+            app:isEdit="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="1.0"
+            android:textColor="@color/app_theme_color"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/applyCancelPw"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="申请取消订单"
+        android:textColor="@color/tv_333"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <!--shape_rounded_rectangle_gray_bg-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="156dp">
+
+        <EditText
+            android:id="@+id/reasonExit"
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/shape_rounded_rectangle_gray_bg"
+            android:gravity="start"
+            android:hint="说点什么吧"
+            android:maxLength="100"
+            android:padding="4dp"
+            android:text=""
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/wordsAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="24dp"
+            android:text="0/100"
+            android:textColor="@color/tv_333"
+            android:textSize="@dimen/text_size_14sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="128dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/shape_bordar_perice_bg"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/submit"
+            android:layout_width="128dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/shape_rectangle_upper_harf2"
+            android:gravity="center"
+            android:text="提交评价"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

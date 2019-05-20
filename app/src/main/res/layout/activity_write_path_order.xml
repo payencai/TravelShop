@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.activity.WritePathOrderActivity">
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/headLayout"
+                layout="@layout/toobar_head_layout" />
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headLayout"
+                android:layout_margin="@dimen/aroundLR_edge"
+                android:background="@drawable/shape_circular_bead_while"
+                android:orientation="vertical"
+                android:padding="@dimen/aroundLR_edge">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="广州长隆水上乐园门票"
+                    android:textColor="@color/tv_333"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/lines" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/dayInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cancel"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="8dp"
+                        android:text="2018年07月25日 广州出发"
+                        android:textColor="@color/tv_333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="6dp"
+                        android:layout_toLeftOf="@+id/add_or_subtract_layout"
+                        android:text="人数: "
+                        android:textColor="@color/tv_333"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/add_or_subtract_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/shape_transparent_content_bg"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/number_reduce"
+                            android:layout_width="@dimen/length_view_30dp"
+                            android:layout_height="@dimen/length_view_30dp"
+                            android:padding="6dp"
+                            android:src="@mipmap/number_reduce" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/lines" />
+
+                        <TextView
+                            android:id="@+id/doorTicketCount"
+                            android:layout_width="@dimen/length_view_30dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/tv_333"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:background="@color/lines" />
+
+                        <ImageView
+                            android:id="@+id/number_add"
+                            android:layout_width="@dimen/length_view_30dp"
+                            android:layout_height="@dimen/length_view_30dp"
+                            android:padding="6dp"
+                            android:src="@mipmap/number_add" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout1"
+                android:layout_marginBottom="@dimen/aroundLR_edge"
+                android:layout_marginLeft="@dimen/aroundLR_edge"
+                android:layout_marginRight="@dimen/aroundLR_edge"
+                android:background="@drawable/shape_circular_bead_while"
+                android:orientation="vertical"
+                android:padding="@dimen/aroundLR_edge">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取票信息*"
+                    android:textColor="@color/tv_333"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="联系人"
+                        android:textColor="@color/color_888"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/editName"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:background="@null"
+                            android:hint="请输入证件人姓名"
+                            android:textColor="@color/tv_333"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/lines" />
+
+                        <EditText
+                            android:id="@+id/editTel"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@null"
+                            android:hint="手机号"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:textColor="@color/tv_333"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/lines" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="写备注"
+                        android:textColor="@color/color_888"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <EditText
+                        android:id="@+id/noteEdit"
+                        android:layout_width="0dp"
+                        android:layout_height="83dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/shape_rectangle_chat_edit_bg"
+                        android:gravity="start"
+                        android:hint="备注"
+                        android:padding="4dp"
+                        android:text=""
+                        android:textColor="@color/tv_333"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/text_size_16sp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出行人*"
+                    android:textColor="@color/tv_333"
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/travellerList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"></android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/bottom_column"
+        android:background="@color/lines" />
+
+    <RelativeLayout
+        android:id="@+id/bottom_column"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/aroundLR_edge"
+        android:paddingRight="@dimen/aroundLR_edge">
+
+
+        <TextView
+            android:id="@+id/totalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical|start"
+            android:text="¥350"
+            android:textColor="#FFA726"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/reserve_now"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/shape_rectangle_upper_harf"
+            android:gravity="center"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:text="立即预定"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

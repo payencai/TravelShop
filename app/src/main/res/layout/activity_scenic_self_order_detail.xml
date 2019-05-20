@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".home.activity.ScenicSelfOrderDetailActivity">
+
+
+    <include layout="@layout/toobar_oneslef_head_layout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="189dp">
+
+        <ImageView
+            android:id="@+id/gaussImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/scenery"
+            android:layout_width="145dp"
+            android:layout_height="109dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/picture_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/scenery"
+            android:layout_alignRight="@id/scenery"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="10dp"
+            android:text="1/1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/recall_size_12" />
+
+        <TextView
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/scenery"
+            android:layout_alignTop="@id/scenery"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="12dp"
+            android:layout_toRightOf="@id/scenery"
+            android:ellipsize="end"
+            android:maxLines="5"
+            android:text="景点简介：\n暑期/周六日/法定节假日营业时间；09:30--19:00.平日营业时间；09:30--18:00"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/scenery"
+            android:layout_below="@id/scenery"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/hotel_location_white"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:text="\t广东省广州市番禺区长隆旅游度假区"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_below="@+id/activity_common_view_pager"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5.0 分"
+                android:textColor="#FF5426"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rectangle_orange"
+                android:padding="4dp"
+                android:text="非常好"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_margin="12dp"
+            android:layout_toRightOf="@+id/layout1"
+            android:background="@color/lines" />
+
+
+        <TextView
+            android:id="@+id/evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/view1"
+            android:layout_toRightOf="@+id/view1"
+            android:text="262条评论"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+        <com.tec.travelagency.widget.StarLinearLayout
+            android:id="@+id/Star"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_alignBottom="@id/view1"
+            android:layout_toRightOf="@id/view1"
+            app:isEdit="true" />
+
+        <TextView
+            android:id="@+id/scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/view1"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/Star"
+            android:text="好评率：100%"
+            android:textColor="@color/tv_333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_arrow_right" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/scenic_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"></LinearLayout>
+
+
+</LinearLayout>
